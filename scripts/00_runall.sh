@@ -45,5 +45,4 @@ Rscript 02_flowsom2.R -p $PBS_ARRAYID
 echo ../results/02_flowsom1/* | Rscript 03_computeEvaluation.R -f ../results/03_flow1Result.RData
 echo ../results/02_flowsom2/* | Rscript 03_computeEvaluation.R -f ../results/03_flow2Result.RData
 # Create plots
-mkdir -p ../results/04_figs
 Rscript 04_resultAnalysis.R

@@ -60,7 +60,7 @@ for(filename in filenames){
 }
 
 save(results, file=opt$filename)
-print('Done!\n')
+print('Done!')
 
 
 

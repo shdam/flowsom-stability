@@ -13,6 +13,10 @@ load(datafile, envir = parent.frame(), verbose = FALSE)
 n_stable <- 1000
 patients <- c('001', '284d2', '84-0001-01', '885d1', '885d3', '885d4', '885d5', 'Pat03', 'Pat05', "all")
 
+system('mkdir -p ../results/04_figs')
+system('mkdir -p ../results/04_figs/full')
+
+
 
 ###############################
 ### Full dataset analysis
@@ -154,6 +158,14 @@ for(version in 1:2){
 for(version in 1:2){
 results <- loadResult(version)
 
+system(paste0('mkdir -p ../results/04_figs/meanARI_f',version))
+system(paste0('mkdir -p ../results/04_figs/meanAMI_f',version))
+system(paste0('mkdir -p ../results/04_figs/comp_mes_f',version))
+system(paste0('mkdir -p ../results/04_figs/ARI_nclust_f',version))
+system(paste0('mkdir -p ../results/04_figs/AMI_nclust_f',version))
+system(paste0('mkdir -p ../results/04_figs/ARI_seed_f',version))
+system(paste0('mkdir -p ../results/04_figs/AMI_seed_f',version))
+
 ## Compare sample sizes - TrueARI
 # for(p in 1:10){
 #   patient <- c('001', '284d2', '84-0001-01', '885d1', '885d3', '885d4', '885d5', 'Pat03', 'Pat05', "all")[p]
@@ -173,6 +185,8 @@ results <- loadResult(version)
 # }
 
 ## Compare sample sizes - ARI
+
+
 for(p in 1:10){
   patient <- c('001', '284d2', '84-0001-01', '885d1', '885d3', '885d4', '885d5', 'Pat03', 'Pat05', "all")[p]
   
@@ -379,7 +393,7 @@ for (p in 1:10){
 
 ######################################
 ### simple boxplots (plots not saved)
-
+stop('Done!')
 ## Mean adjusted rand index - Boxplot
 
 sizes <- c('10000','20000','50000','100000','All')
