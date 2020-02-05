@@ -1,0 +1,5 @@
+# Ignore RData files:
+*.RData
+*.Rdata
+# Ignore pictures
+# *.png
