@@ -2,4 +2,8 @@
 *.RData
 *.Rdata
 # Ignore pictures
-# *.png
+*.png
+# Ignore Rhistory
+*.Rhistory
+# Ignore pdf's
+*.pdf
