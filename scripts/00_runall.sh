@@ -31,9 +31,14 @@ module load tools
 module load intel/perflibs/64
 module load R/3.6.1
 # Program_name_and_options
+mkdir -p ../data
+mkdir -p ../results
+
 Rscript 01_make_parameter_grid.R
+
 mkdir -p ../results/02_flowsom1
 mkdir -p ../results/02_flowsom2
+
 Rscript 02_flowsom.R -p $PBS_ARRAYID
 Rscript 02_flowsom2.R -p $PBS_ARRAYID
 # Compute evaluations
